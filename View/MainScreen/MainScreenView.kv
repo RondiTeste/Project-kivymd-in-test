@@ -1,0 +1,38 @@
+<MainScreenView>:
+	name:"mainscreen"
+	MDFloatLayout:
+		Image:
+			soucre:"../teste/image/us.png"
+			pos_hint:{'center_x':.5,'center_y':.8}
+			size_hint:None,None
+			size:"150dp","150dp"
+		MDLabel:
+			text:'cadastere-se'
+			halign:"center"
+			pos_hint:{'center_y':.7}
+			adaptive_height:True
+		MDTextField:
+			id:"maintextfield1"
+			hint_text:"emal"
+			icon_right:"email"
+			on_text:app.emailapeend()
+			size_hint:None,None
+			size:"250dp","250dp"
+			pos_hint:{'center_x':.5,'center_y':.5}
+		MDTextField:
+			id:"maintextfield2"
+			hint_text:"senha"
+			icon_right:"lock"
+			on_text:app.emailapeend()
+			size_hint:None,None
+			size:"250dp","250dp"
+			pos_hint:{'center_x':.5,'center_y':.4}
+			
+		MDRaisedButton:
+			text:"Next twoscreen"
+			pos_hint:{'center_x':.5,'center_y':.3}
+			on_release:
+				root.manager.current="twoscreen"
+				root.manager.transition.direction="left"
+		
+				
